@@ -24,12 +24,19 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This app is a demo of sending verify code or link by email to reset password.
+
+Firstly, regist a gmail account. Then go to [account setting](https://myaccount.google.com/security) page and set [Less secure app access] -> on.
+
+There is two options to reset password, first is using 6 digits to verify account information, second is using jwt to create a link to verify account information.
+
+Also, need to create a password-reset table, which may include properties like: userId, email, code, expireIn, activated etc.
 
 ## Installation
 
 ```bash
-$ npm install
+$ yarn add @nestjs-modules/mailer nodemailer
+$ yarn add -D @types/nodemailer
 ```
 
 ## Running the app
